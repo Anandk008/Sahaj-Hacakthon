@@ -35,11 +35,9 @@ app.post('/employee', (req, res) => {
     const { name, city } = req.body;
     
     // Generate unique id for new item
-    const newItem = { name, city}
-  newItem.id = Date.now().toString();
-//   newItem.name = req.name;
-//   newItem.city = req.city;
-    console.log(newItem);
+    const newItem = { id: Date.now().toString(), name, city}
+
+
   data.push(newItem);
 
 
@@ -47,7 +45,7 @@ app.post('/employee', (req, res) => {
   // Save data to file
   fs.writeFileSync('data.json', JSON.stringify(data));
 
-  res.status(201).json(ans);
+  res.status(201).json({employeeId: newItem.id});
 });
 
 // PUT update item by id
