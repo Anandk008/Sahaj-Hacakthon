@@ -1,0 +1,15 @@
+{
+  "name": "wce-employee-mgmt.anandk008",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"> <img src=\"http://nano.sahaj.ai/logo.png\" width=\"320\" height=\"162\" altText=\"Logo\" title=\"NaN(O) logo\"> </p>",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
