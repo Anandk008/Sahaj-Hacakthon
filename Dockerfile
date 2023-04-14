@@ -1,5 +1,4 @@
-FROM alpine:latest
+FROM node:alpine
 WORKDIR /app
-
-
-CMD [ "echo", "Hello world" ]
+COPY . .
+CMD [ "node", "main.js" ]

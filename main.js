@@ -1,10 +1,16 @@
-const xhr = new XMLHttpRequest();
+const http = require("http");
 
-function fetch() {
-    xhr.open('GET', data.json, true);
+const server = http.createServer(async (req, res) => {
+  if (req.url === "/api-contract" && req.method === "GET") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.write("Hello world!");
+    res.end();
+  }
 
-    xhr.onload= function() {
-        if(this.status == 200)
-            console.log(this.responseText);
-    }
-}
+  else {
+    res.writeHead(404, {"Content-Type": "application/json"});
+    res.end(JSON.stringify({message: "Route note found"}));
+  }
+});
+
+server.listen(8080, () => console.log("Server Runing on 8080"));
