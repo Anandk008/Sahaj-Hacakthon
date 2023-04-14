@@ -1,7 +1,7 @@
 const http = require("http");
 
 const server = http.createServer(async (req, res) => {
-  if (req.url === "/api-contract" && req.method === "GET") {
+  if (req.url === "/greeting" && req.method === "GET") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.write("Hello world!");
     res.end();
